@@ -1,0 +1,15 @@
+<h1>Sign In</h1>
+
+<%= form_tag '/signin' do %>
+  <label>Name:</label><br>
+  <%= text_field_tag :'user[name]' %><br>
+  <label>Password:</label><br>
+  <%= text_field_tag :'user[password]' %><br>
+
+  <%= submit_tag "Sign In" %>
+<% end %>
+
+
+
+
+<!-- # <%= link_to "Back" , root_path %> -->

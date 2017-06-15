@@ -1,0 +1,22 @@
+<h1> Attraction Index Page </h1>
+
+<ul>
+  <% @attractions.each do |a| %>
+  <li>
+    <!-- <a href="/attractions/<%=a.id%>"><%= a.name %></a> -->
+
+    <% if @user.admin == true %>
+        <%= link_to("Show #{a.name}", "/attractions/#{a.id}") %>
+        <%= link_to("Edit #{a.name}", "/attractions/#{a.id}/edit") %>
+    <% else  %>
+        <%= link_to("Go on #{a.name}", "/attractions/#{a.id}") %>
+    <% end  %>
+
+  </li>
+  <% end %>
+</ul>
+
+<% if @user.admin == true %>
+    <h2> ADMIN </h2>
+    <%= link_to "New Attraction" , new_attraction_path %>
+<% end  %>

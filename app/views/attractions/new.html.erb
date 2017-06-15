@@ -1,0 +1,10 @@
+<h1>Create New Ride</h1>
+
+<%= form_for @attraction do |f| %>
+  <h5>Name: </h5><%= f.text_field :name %><br>
+  <h5>Height Requirement: </h5><%= f.number_field :min_height %><br>
+  <h5>How fun is it? (1-5 scale)</h5><%= f.number_field :happiness_rating %><br>
+  <h5>How nausea-inducing is it? (1-5 scale)</h5><%= f.number_field :nausea_rating %><br>
+  <h5>How many tickets does it cost?</h5><%= f.number_field :tickets %><br>
+  <%= f.submit "Create Attraction" %><br>
+<% end %>

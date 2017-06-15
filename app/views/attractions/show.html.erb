@@ -1,0 +1,18 @@
+<h1> Name: <%= @attraction.name.titleize %>!</h1>
+<h2> Tickets: <%= @attraction.tickets %></h2>
+
+<h2> Total Number of Users:</h2>
+
+<h2> Ticket Requirement: </h2>
+
+<h2> Height Requirement: </h2>
+
+<h2> Nausea Rating: </h2>
+
+<h2> Happiness Rating: <%= @attraction.happiness_rating %> </h2>
+
+<%= button_to "Go on this ride" , ride_attraction_path(@attraction) %>
+
+<% if @user.admin == true %>
+    <%= link_to("Edit Attraction", "/attractions/#{@attraction.id}/edit") %>
+<% end  %>
